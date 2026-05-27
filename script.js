@@ -16,19 +16,36 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// Contact form
+// Contact form — submits to Formspree
 const form = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async e => {
   e.preventDefault();
   const btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Sending...';
   btn.disabled = true;
-  setTimeout(() => {
-    form.style.display = 'none';
-    formSuccess.style.display = 'block';
-  }, 900);
+
+  try {
+    const response = await fetch('https://formspree.io/f/xeedvavy', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+
+    if (response.ok) {
+      form.style.display = 'none';
+      formSuccess.style.display = 'block';
+    } else {
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      alert('Something went wrong. Please call or text us at 845-395-4492.');
+    }
+  } catch {
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+    alert('Something went wrong. Please call or text us at 845-395-4492.');
+  }
 });
 
 // Scroll-in animations
