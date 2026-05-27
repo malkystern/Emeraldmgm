@@ -129,43 +129,16 @@ img { max-width: 100%; display: block; }
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-.logo-mark {
-  width: 44px;
-  height: 32px;
-  flex-shrink: 0;
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
 }
 
-.logo-mark-sm {
-  width: 38px;
-  height: 28px;
-}
-
-.logo-svg { width: 100%; height: 100%; }
-
-.logo-text-wrap {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.logo-main {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: .3px;
-}
-
-.logo-sub {
-  font-family: 'Inter', sans-serif;
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 3px;
-  color: rgba(255,255,255,.6);
-  margin-top: 2px;
+.logo-img-sm {
+  height: 42px;
 }
 
 /* ===== NAVBAR ===== */
