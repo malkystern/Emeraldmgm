@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emerald Management | Property Management Services</title>
+  <title>Emerald Management | Your Trusted Partner in Home Management</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -15,8 +15,17 @@
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <span class="logo-icon">◆</span>
-        <span class="logo-text">Emerald Management</span>
+        <div class="logo-mark">
+          <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+            <polygon points="10,40 22,8 34,40" fill="#2d3d32"/>
+            <polygon points="20,40 32,14 44,40" fill="#3f5449"/>
+            <polygon points="30,40 42,20 54,40" fill="#5a7265"/>
+          </svg>
+        </div>
+        <div class="logo-text-wrap">
+          <span class="logo-main">Emerald</span>
+          <span class="logo-sub">MANAGEMENT</span>
+        </div>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -24,8 +33,8 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
+        <li><a href="#plans">Plans</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#contact" class="nav-cta">Contact Us</a></li>
       </ul>
     </div>
@@ -33,73 +42,165 @@
 
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-tagline">Professional Property Management</p>
-      <h1 class="hero-title">Your Property,<br />Our Priority</h1>
-      <p class="hero-subtitle">Emerald Management delivers full-service property management with integrity, transparency, and results you can count on.</p>
+      <p class="hero-eyebrow">Your Trusted Partner in Home Management</p>
+      <h1 class="hero-title">Your Home,<br />Perfectly Cared For</h1>
+      <p class="hero-subtitle">At Emerald Management, we understand that your home is your sanctuary. We take care of every maintenance need so you can focus on what truly matters.</p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
-        <a href="#services" class="btn btn-outline">Our Services</a>
+        <a href="#plans" class="btn btn-primary">View Our Plans</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-number">200+</span>
-        <span class="stat-label">Properties Managed</span>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-icon">📞</div>
+        <div class="hero-card-text">
+          <strong>24/7 On-Call</strong>
+          <span>We're always here when you need us</span>
+        </div>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-number">15+</span>
-        <span class="stat-label">Years Experience</span>
+      <div class="hero-card">
+        <div class="hero-card-icon">🏠</div>
+        <div class="hero-card-text">
+          <strong>Complete Home Care</strong>
+          <span>From plumbing to seasonal prep</span>
+        </div>
       </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-number">98%</span>
-        <span class="stat-label">Client Satisfaction</span>
+      <div class="hero-card">
+        <div class="hero-card-icon">✅</div>
+        <div class="hero-card-text">
+          <strong>Trusted Professionals</strong>
+          <span>Experienced, licensed team</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- SERVICES OVERVIEW -->
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
-        <p class="section-label">What We Offer</p>
-        <h2 class="section-title">Comprehensive Property Management Services</h2>
-        <p class="section-subtitle">From tenant screening to maintenance, we handle every aspect of your property so you don't have to.</p>
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Everything Your Home Needs</h2>
+        <p class="section-subtitle">From routine maintenance checks to seasonal preparation, our team handles it all — so you never have to worry.</p>
       </div>
       <div class="services-grid">
         <div class="service-card">
-          <div class="service-icon">🏠</div>
-          <h3>Tenant Placement</h3>
-          <p>Rigorous background checks, credit screening, and lease execution to place reliable, qualified tenants in your property.</p>
-        </div>
-        <div class="service-card">
           <div class="service-icon">🔧</div>
-          <h3>Maintenance & Repairs</h3>
-          <p>24/7 emergency response and a trusted network of licensed contractors to keep your property in top condition.</p>
+          <h3>24/7 On-Call Assistance</h3>
+          <p>Any home issue is one call away from resolution. Our experienced plumbers, electricians, and handymen are always at your service.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">💰</div>
-          <h3>Rent Collection</h3>
-          <p>Timely rent collection, detailed financial reporting, and owner disbursements — all handled on your behalf.</p>
+          <div class="service-icon">🔍</div>
+          <h3>Regular Maintenance Checks</h3>
+          <p>Thorough home system checks every 4 months — including AC filters, water softeners, and water filters — keeping everything in top shape.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">📋</div>
-          <h3>Property Inspections</h3>
-          <p>Routine move-in, move-out, and periodic inspections with detailed reports to protect your investment.</p>
+          <div class="service-icon">🍂</div>
+          <h3>Gutter Cleaning</h3>
+          <p>Annual gutter cleaning before winter to keep your home free from debris and protected from potential water damage.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">⚖️</div>
-          <h3>Legal Compliance</h3>
-          <p>Stay compliant with local landlord-tenant laws, lease renewals, and eviction proceedings when necessary.</p>
+          <div class="service-icon">🌿</div>
+          <h3>Seasonal Preparation</h3>
+          <p>We open and close your sprinkler system, store outdoor furniture, and prepare your home for every season seamlessly.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon">📊</div>
-          <h3>Financial Reporting</h3>
-          <p>Transparent monthly statements and year-end reports so you always know exactly where your investment stands.</p>
+          <div class="service-icon">❄️</div>
+          <h3>Snow Removal</h3>
+          <p>Safe access to your home all winter long. We handle snow removal so you never have to deal with dangerous conditions.</p>
         </div>
+        <div class="service-card">
+          <div class="service-icon">🌱</div>
+          <h3>Lawn & Exterior Care</h3>
+          <p>Weekly grass cutting throughout summer, annual power washing, and dryer vent cleaning to keep your home looking its best.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING PLANS -->
+  <section class="plans" id="plans">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Pricing</p>
+        <h2 class="section-title">Simple, Transparent Plans</h2>
+        <p class="section-subtitle">Choose the level of care that fits your home and lifestyle. No hidden fees, no surprises.</p>
+      </div>
+      <div class="plans-grid">
+
+        <!-- Plan 1 -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <p class="plan-name">Essential Care</p>
+            <div class="plan-price">
+              <span class="price-dollar">$</span>
+              <span class="price-amount">250</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="plan-tagline">Everything you need for a well-maintained home</p>
+          </div>
+          <ul class="plan-features">
+            <li><span class="feat-check">✓</span> 24/7 On-Call Assistance (plumbers, electricians, handymen)</li>
+            <li><span class="feat-check">✓</span> Maintenance checks every 4 months</li>
+            <li><span class="feat-check">✓</span> AC filter changes & water softener maintenance</li>
+            <li><span class="feat-check">✓</span> Yearly gutter cleaning (pre-winter)</li>
+            <li><span class="feat-check">✓</span> Annual garbage can cleaning (pre-summer)</li>
+            <li><span class="feat-check">✓</span> Seasonal sprinkler system open/close</li>
+            <li><span class="feat-check">✓</span> Outdoor furniture storage assistance</li>
+            <li><span class="feat-check">✓</span> More services added regularly</li>
+          </ul>
+          <a href="#contact" class="btn btn-plan">Get Started</a>
+        </div>
+
+        <!-- Plan 2 - Featured -->
+        <div class="plan-card plan-featured">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-header">
+            <p class="plan-name">VIP Care</p>
+            <div class="plan-price">
+              <span class="price-dollar">$</span>
+              <span class="price-amount">650</span>
+              <span class="price-period">/month</span>
+            </div>
+            <p class="plan-tagline">Total home care — inside and out</p>
+          </div>
+          <ul class="plan-features">
+            <li><span class="feat-check">✓</span> Everything in Essential Care</li>
+            <li><span class="feat-check">✓</span> Snow removal (winter months)</li>
+            <li><span class="feat-check">✓</span> Weekly grass cutting (summer)</li>
+            <li><span class="feat-check">✓</span> Annual power wash (exterior)</li>
+            <li><span class="feat-check">✓</span> Annual dryer vent cleaning</li>
+            <li><span class="feat-check">✓</span> Extended outdoor home assistance</li>
+            <li><span class="feat-check">✓</span> Priority response times</li>
+            <li><span class="feat-check">✓</span> Ongoing service additions</li>
+          </ul>
+          <a href="#contact" class="btn btn-plan-featured">Get Started</a>
+        </div>
+
+        <!-- Pool Plan -->
+        <div class="plan-card plan-coming">
+          <div class="plan-badge plan-badge-soon">Coming Soon</div>
+          <div class="plan-header">
+            <p class="plan-name">Pool Care</p>
+            <div class="plan-price plan-price-soon">
+              <span class="price-amount-soon">TBD</span>
+            </div>
+            <p class="plan-tagline">Keep your pool in pristine condition all summer</p>
+          </div>
+          <ul class="plan-features">
+            <li><span class="feat-check feat-muted">✓</span> Regular pool maintenance</li>
+            <li><span class="feat-check feat-muted">✓</span> Chemical balancing</li>
+            <li><span class="feat-check feat-muted">✓</span> Seasonal opening & closing</li>
+            <li><span class="feat-check feat-muted">✓</span> Equipment checks</li>
+            <li><span class="feat-check feat-muted">✓</span> Tailored to summer season</li>
+            <li class="feat-placeholder"></li>
+            <li class="feat-placeholder"></li>
+            <li class="feat-placeholder"></li>
+          </ul>
+          <a href="#contact" class="btn btn-plan btn-plan-notify">Get Notified</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -108,73 +209,29 @@
   <section class="about" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-image">
-          <div class="about-img-block">
-            <div class="about-img-main"></div>
-            <div class="about-badge">
-              <span class="badge-number">15+</span>
-              <span class="badge-text">Years of Excellence</span>
-            </div>
+        <div class="about-visual">
+          <div class="about-blocks">
+            <div class="ab ab-1"></div>
+            <div class="ab ab-2"></div>
+            <div class="ab ab-3"></div>
+          </div>
+          <div class="about-quote">
+            <p>"Your home's well-being is our priority."</p>
+            <span>— Emerald Management</span>
           </div>
         </div>
         <div class="about-content">
           <p class="section-label">About Us</p>
-          <h2 class="section-title">Built on Trust,<br />Driven by Results</h2>
-          <p>Emerald Management was founded on a simple belief: property owners deserve a partner who treats their investment like their own. With over 15 years in the industry, we've built a reputation for honesty, reliability, and exceptional service.</p>
-          <p>Our team of experienced professionals manages residential and commercial properties across the area, delivering peace of mind to owners and quality living experiences for tenants.</p>
+          <h2 class="section-title">We Treat Your Home<br />Like Our Own</h2>
+          <p>At Emerald Management, we understand that your home is your sanctuary. Our mission is to provide the highest level of convenience and peace of mind by taking care of all your home maintenance needs.</p>
+          <p>With a dedicated team of experienced professionals — plumbers, electricians, handymen, and lawn care specialists — we've built our reputation on reliability, transparency, and genuine care for every home we serve.</p>
           <ul class="about-list">
-            <li><span class="check">✓</span> Licensed & insured property management professionals</li>
-            <li><span class="check">✓</span> Dedicated account manager for every property</li>
-            <li><span class="check">✓</span> Transparent fee structure — no hidden charges</li>
-            <li><span class="check">✓</span> Online owner & tenant portals available 24/7</li>
+            <li><span class="check">✓</span> Experienced, licensed professionals</li>
+            <li><span class="check">✓</span> Proactive care — we catch problems before they grow</li>
+            <li><span class="check">✓</span> Reachable by call, text, or WhatsApp</li>
+            <li><span class="check">✓</span> Transparent pricing — no hidden fees</li>
           </ul>
-          <a href="#contact" class="btn btn-primary">Work With Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Client Stories</p>
-        <h2 class="section-title">What Our Clients Say</h2>
-        <p class="section-subtitle">Don't just take our word for it — hear from the property owners who trust us every day.</p>
-      </div>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Emerald Management transformed my rental experience completely. My properties are always occupied and my owners' portal keeps me updated in real time. I couldn't ask for a better team."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">MR</div>
-            <div class="author-info">
-              <strong>Michael R.</strong>
-              <span>Multi-Family Property Owner</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card featured">
-          <div class="stars">★★★★★</div>
-          <p>"I was skeptical at first, but switching to Emerald Management was the best decision I made for my investment properties. They handle everything — I just check my reports and collect my income."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">SL</div>
-            <div class="author-info">
-              <strong>Sandra L.</strong>
-              <span>Residential Landlord</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Professional, responsive, and honest. They found me great tenants within two weeks and have kept my property in excellent shape ever since. I highly recommend Emerald Management."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">DT</div>
-            <div class="author-info">
-              <strong>David T.</strong>
-              <span>Commercial Property Owner</span>
-            </div>
-          </div>
+          <a href="#plans" class="btn btn-primary">See Our Plans</a>
         </div>
       </div>
     </div>
@@ -185,82 +242,85 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
-          <p class="section-label">Get In Touch</p>
-          <h2 class="section-title">Let's Talk About Your Property</h2>
-          <p>Ready to take the stress out of property management? Contact us today for a free, no-obligation consultation.</p>
+          <p class="section-label">Reach Out</p>
+          <h2 class="section-title">Let's Talk About<br />Your Home</h2>
+          <p>Ready to take the stress out of home maintenance? Contact us today — we'd love to help.</p>
+
           <div class="contact-details">
-            <div class="contact-item">
-              <span class="contact-icon">📍</span>
+            <a href="tel:8453954492" class="contact-item contact-link">
+              <div class="contact-icon-wrap">📞</div>
               <div>
-                <strong>Office</strong>
-                <span>123 Emerald Avenue, Suite 100<br />Your City, State 00000</span>
+                <strong>Call / Text / WhatsApp</strong>
+                <span>845-395-4492</span>
               </div>
-            </div>
-            <div class="contact-item">
-              <span class="contact-icon">📞</span>
-              <div>
-                <strong>Phone</strong>
-                <span>(555) 000-0000</span>
-              </div>
-            </div>
-            <div class="contact-item">
-              <span class="contact-icon">✉️</span>
+            </a>
+            <a href="mailto:info@emeraldmgm.com" class="contact-item contact-link">
+              <div class="contact-icon-wrap">✉️</div>
               <div>
                 <strong>Email</strong>
                 <span>info@emeraldmgm.com</span>
               </div>
-            </div>
+            </a>
             <div class="contact-item">
-              <span class="contact-icon">🕐</span>
+              <div class="contact-icon-wrap">🕐</div>
               <div>
-                <strong>Hours</strong>
-                <span>Mon – Fri: 9am – 6pm</span>
+                <strong>Availability</strong>
+                <span>24/7 for emergencies</span>
               </div>
             </div>
           </div>
+
+          <div class="contact-cta-box">
+            <p>Prefer to reach us directly?</p>
+            <div class="cta-buttons">
+              <a href="tel:8453954492" class="btn btn-primary">Call Now</a>
+              <a href="https://wa.me/18453954492" class="btn btn-outline-dark">WhatsApp</a>
+            </div>
+          </div>
         </div>
+
         <div class="contact-form-wrap">
           <form class="contact-form" id="contactForm">
+            <h3 class="form-title">Send Us a Message</h3>
             <div class="form-row">
               <div class="form-group">
                 <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
               </div>
               <div class="form-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
               </div>
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+              <input type="tel" id="phone" name="phone" placeholder="(845) 000-0000" />
             </div>
             <div class="form-group">
-              <label for="service">Service Interest</label>
-              <select id="service" name="service">
-                <option value="">Select a service...</option>
-                <option value="tenant-placement">Tenant Placement</option>
-                <option value="full-management">Full Property Management</option>
-                <option value="maintenance">Maintenance Services</option>
-                <option value="financial">Financial Reporting</option>
-                <option value="other">Other</option>
+              <label for="plan">Interested In</label>
+              <select id="plan" name="plan">
+                <option value="">Select a plan...</option>
+                <option value="essential">Essential Care — $250/month</option>
+                <option value="vip">VIP Care — $650/month</option>
+                <option value="pool">Pool Plan (Coming Soon)</option>
+                <option value="question">General Question</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="Tell us about your property and what you're looking for..."></textarea>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your home and what you need..."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-            <p class="form-note">We'll respond within 1 business day.</p>
+            <p class="form-note">We'll respond as soon as possible. For urgent needs, call or text us directly.</p>
           </form>
           <div class="form-success" id="formSuccess" style="display:none;">
             <div class="success-icon">✓</div>
             <h3>Message Sent!</h3>
-            <p>Thank you for reaching out. We'll be in touch within 1 business day.</p>
+            <p>Thank you for reaching out. We'll be in touch very soon.</p>
           </div>
         </div>
       </div>
@@ -270,43 +330,38 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-inner">
         <div class="footer-brand">
-          <a href="#home" class="nav-logo">
-            <span class="logo-icon">◆</span>
-            <span class="logo-text">Emerald Management</span>
+          <a href="#home" class="nav-logo footer-logo">
+            <div class="logo-mark logo-mark-sm">
+              <svg viewBox="0 0 54 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                <polygon points="10,40 22,8 34,40" fill="#3f5449"/>
+                <polygon points="20,40 32,14 44,40" fill="#5a7265"/>
+                <polygon points="30,40 42,20 54,40" fill="#7a9485"/>
+              </svg>
+            </div>
+            <div class="logo-text-wrap">
+              <span class="logo-main">Emerald</span>
+              <span class="logo-sub">MANAGEMENT</span>
+            </div>
           </a>
-          <p>Professional property management services you can trust. Your investment is our commitment.</p>
+          <p class="footer-tagline">Your Trusted Partner in Home Management</p>
         </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+        <div class="footer-contact-info">
+          <a href="tel:8453954492">📞 845-395-4492</a>
+          <a href="mailto:info@emeraldmgm.com">✉️ info@emeraldmgm.com</a>
         </div>
-        <div class="footer-links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Tenant Placement</a></li>
-            <li><a href="#services">Maintenance & Repairs</a></li>
-            <li><a href="#services">Rent Collection</a></li>
-            <li><a href="#services">Property Inspections</a></li>
-            <li><a href="#services">Financial Reporting</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p>📍 123 Emerald Avenue, Suite 100</p>
-          <p>📞 (555) 000-0000</p>
-          <p>✉️ info@emeraldmgm.com</p>
-        </div>
+        <nav class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#plans">Plans</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
       <div class="footer-bottom">
         <p>© 2024 Emerald Management. All rights reserved.</p>
+        <p>Your home's well-being is our priority.</p>
       </div>
     </div>
   </footer>

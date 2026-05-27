@@ -1,7 +1,7 @@
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
 // Mobile nav toggle
@@ -12,27 +12,11 @@ navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
-// Close mobile nav on link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
-
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 100) current = section.id;
-  });
-  navItems.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-  });
-});
-
-// Contact form submit
+// Contact form
 const form = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
@@ -41,16 +25,13 @@ form.addEventListener('submit', e => {
   const btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Sending...';
   btn.disabled = true;
-
-  // Simulate submission delay
   setTimeout(() => {
     form.style.display = 'none';
     formSuccess.style.display = 'block';
-  }, 1000);
+  }, 900);
 });
 
-// Intersection Observer for fade-in animations
-const observerOptions = { threshold: 0.12, rootMargin: '0px 0px -40px 0px' };
+// Scroll-in animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -59,11 +40,11 @@ const observer = new IntersectionObserver((entries) => {
       observer.unobserve(entry.target);
     }
   });
-}, observerOptions);
+}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-document.querySelectorAll('.service-card, .testimonial-card, .about-content, .contact-info').forEach(el => {
+document.querySelectorAll('.service-card, .plan-card, .hero-card, .about-content, .contact-info').forEach((el, i) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(28px)';
-  el.style.transition = 'opacity .6s ease, transform .6s ease';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = `opacity .55s ease ${i * 0.07}s, transform .55s ease ${i * 0.07}s`;
   observer.observe(el);
 });
