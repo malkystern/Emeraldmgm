@@ -243,53 +243,37 @@ img { max-width: 100%; display: block; }
 
 /* ===== HERO ===== */
 .hero {
-  min-height: 100vh;
-  background: linear-gradient(150deg, var(--dark-1) 0%, var(--dark-2) 45%, var(--dark-3) 100%);
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  padding: 120px 28px 80px;
-  max-width: 1140px;
-  margin: 0 auto;
-  gap: 64px;
-}
-
-/* Full-width dark background behind hero */
-.hero-section-bg {
-  background: linear-gradient(150deg, var(--dark-1) 0%, var(--dark-2) 45%, var(--dark-3) 100%);
-}
-
-body > section.hero {
-  max-width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* Hack: wrap hero content + constrain */
-section.hero {
   position: relative;
   min-height: 100vh;
   background: linear-gradient(150deg, var(--dark-1) 0%, var(--dark-2) 45%, var(--dark-3) 100%);
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  padding: 120px 28px 80px;
-  gap: 0;
+  overflow: hidden;
 }
 
-section.hero::before {
+.hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M0 0h40v40H0zm40 40h40v40H40z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 120px 28px 80px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 64px;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 580px;
-  flex: 1;
+  min-width: 0;
 }
 
 .hero-eyebrow {
@@ -977,8 +961,8 @@ section.hero::before {
   .nav-links a { font-size: 16px; }
   .nav-cta { width: 100%; text-align: center; }
 
-  section.hero {
-    flex-direction: column;
+  .hero-inner {
+    grid-template-columns: 1fr;
     padding-top: 100px;
     gap: 40px;
   }
