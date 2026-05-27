@@ -623,17 +623,19 @@ img { max-width: 100%; display: block; }
 .about-visual {
   display: flex;
   align-items: stretch;
+  min-height: 400px;
 }
 
 .about-card-wrap {
-  background: var(--dark-2);
-  border-radius: var(--radius-lg);
+  background: #2d3d32;
+  border-radius: 18px;
   padding: 40px 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
   width: 100%;
+  flex: 1;
 }
 
 .about-logo {
@@ -1021,7 +1023,7 @@ img { max-width: 100%; display: block; }
 
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
-  .about-visual { height: auto; }
+  .about-visual { min-height: unset; }
   .about-card-wrap { padding: 28px 22px; gap: 22px; }
   .about-logo { width: 80px; height: 80px; }
   .about-stat-num { font-size: 28px; }
