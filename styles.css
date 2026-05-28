@@ -1071,6 +1071,11 @@ a.cway:hover { transform: translateX(4px); }
   .plan-coming-card, .plan-contact-card { flex: 1; }
   .section-top { flex-direction: column; align-items: flex-start; gap: 12px; }
   .section-desc { text-align: left; max-width: 100%; }
+  .hero-inner { gap: 40px; padding: 110px 28px 70px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .yp-cards { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { gap: 40px; }
+  .contact-grid { gap: 40px; }
 }
 
 @media (max-width: 768px) {
