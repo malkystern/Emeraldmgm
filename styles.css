@@ -341,6 +341,176 @@ a { text-decoration: none; color: inherit; }
 }
 .hfc-cta:hover { background: rgba(255,255,255,.18); }
 
+/* ===== YEAR PLAN TOOL ===== */
+.year-plan {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.yp-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.yp-header h2 { font-size: clamp(28px, 4vw, 42px); color: var(--ink); margin-bottom: 12px; }
+.yp-header p { font-size: 15px; color: var(--sage); }
+
+.yp-toggles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: var(--pale);
+  border-radius: var(--radius-lg);
+  padding: 28px 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.yp-toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.yp-toggle-label {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+
+.yp-toggle-btns {
+  display: flex;
+  background: var(--pale-2);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.yp-btn {
+  padding: 8px 22px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  background: transparent;
+  color: var(--sage);
+  transition: var(--ease);
+}
+
+.yp-btn.active {
+  background: var(--ink-2);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(26,40,32,.2);
+}
+
+.yp-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--pale-2);
+  flex-shrink: 0;
+}
+
+.yp-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.yp-card {
+  background: var(--pale);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--ease);
+}
+
+.yp-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.yp-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 22px;
+}
+
+.yp-card-top.spring { background: #e8f0eb; }
+.yp-card-top.summer { background: #f0ede4; }
+.yp-card-top.fall   { background: #ede8e0; }
+.yp-card-top.winter { background: #e4eaed; }
+
+.yp-season-icon { font-size: 26px; }
+
+.yp-season-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.yp-season-months {
+  font-size: 11px;
+  color: var(--sage);
+  margin-top: 3px;
+  letter-spacing: .3px;
+}
+
+.yp-items {
+  list-style: none;
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.yp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.45;
+  animation: fadeIn .3s ease;
+}
+
+.yp-item-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.yp-item.highlight .yp-item-dot { background: var(--gold); }
+.yp-item.highlight span { color: var(--ink); font-weight: 500; }
+
+.yp-item.coming {
+  opacity: .55;
+}
+.yp-item.coming .yp-item-dot { background: var(--sage-lt); }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.yp-footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.yp-footer p { font-size: 15px; color: var(--sage); }
+.yp-footer strong { color: var(--ink); }
+
 /* ===== SERVICES ===== */
 .services {
   padding: 100px 0;
@@ -904,6 +1074,9 @@ a.cway:hover { transform: translateX(4px); }
 }
 
 @media (max-width: 768px) {
+  .yp-cards { grid-template-columns: 1fr 1fr; }
+  .yp-toggles { flex-direction: column; align-items: flex-start; }
+  .yp-divider { display: none; }
   .nav-hamburger { display: flex; }
   .nav-menu {
     display: none;
@@ -953,6 +1126,7 @@ a.cway:hover { transform: translateX(4px); }
 }
 
 @media (max-width: 480px) {
+  .yp-cards { grid-template-columns: 1fr; }
   .wrap { padding: 0 18px; }
   .hero-left h1 { font-size: 32px; }
   .hero-actions { flex-direction: column; }

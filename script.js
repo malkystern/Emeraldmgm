@@ -42,7 +42,80 @@ form.addEventListener('submit', async e => {
   }
 });
 
-// Scroll animations
+// ===== YEAR PLAN TOOL =====
+const planData = {
+  spring: {
+    base: [
+      { text: 'AC filter change & system check', highlight: true },
+      { text: 'Water softener maintenance', highlight: false },
+      { text: 'Full home walkthrough & inspection', highlight: false },
+    ],
+    sprinkler: { text: 'Sprinkler system opening & zone test', highlight: true },
+    pool:      { text: 'Pool opening & chemical balance', highlight: true, coming: true },
+  },
+  summer: {
+    base: [
+      { text: 'Garbage can deep cleaning', highlight: true },
+      { text: 'Maintenance check & home inspection', highlight: false },
+      { text: '24/7 on-call for any issues', highlight: false },
+    ],
+    sprinkler: { text: 'Sprinkler mid-season check', highlight: false },
+    pool:      { text: 'Pool upkeep & chemical balancing', highlight: true, coming: true },
+  },
+  fall: {
+    base: [
+      { text: 'Gutter cleaning & debris removal', highlight: true },
+      { text: 'Outdoor furniture storage', highlight: true },
+      { text: 'Pre-winter home inspection', highlight: false },
+    ],
+    sprinkler: { text: 'Sprinkler system winterization & close', highlight: true },
+    pool:      { text: 'Pool closing & winter prep', highlight: true, coming: true },
+  },
+  winter: {
+    base: [
+      { text: 'Water softener & filter check', highlight: true },
+      { text: 'Heating & plumbing inspection', highlight: false },
+      { text: '24/7 emergency on-call', highlight: false },
+    ],
+    sprinkler: null,
+    pool:      null,
+  },
+};
+
+const state = { pool: 'no', sprinkler: 'no' };
+
+function renderCards() {
+  ['spring', 'summer', 'fall', 'winter'].forEach(season => {
+    const data = planData[season];
+    const ul = document.getElementById('items-' + season);
+    const items = [...data.base];
+    if (state.sprinkler === 'yes' && data.sprinkler) items.push(data.sprinkler);
+    if (state.pool === 'yes' && data.pool) items.push(data.pool);
+
+    ul.innerHTML = items.map(item => `
+      <li class="yp-item ${item.highlight ? 'highlight' : ''} ${item.coming ? 'coming' : ''}">
+        <span class="yp-item-dot"></span>
+        <span>${item.text}${item.coming ? ' <em style="font-size:11px;opacity:.6">(coming soon)</em>' : ''}</span>
+      </li>
+    `).join('');
+  });
+}
+
+document.querySelectorAll('.yp-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const q = btn.dataset.q;
+    const v = btn.dataset.v;
+    state[q] = v;
+    document.querySelectorAll(`.yp-btn[data-q="${q}"]`).forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderCards();
+  });
+});
+
+renderCards();
+
+// Also add mobile responsive for year plan toggle
+// ===== Scroll animations =====
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (e.isIntersecting) {
