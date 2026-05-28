@@ -1,22 +1,17 @@
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
+// Navbar scroll
+const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
+// Mobile menu
+const hamburger = document.getElementById('navHamburger');
+const navMenu = document.getElementById('navMenu');
 
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
+hamburger.addEventListener('click', () => navMenu.classList.toggle('open'));
+navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
 
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
-
-// Contact form — submits to Formspree
+// Contact form — Formspree
 const form = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 
@@ -27,41 +22,40 @@ form.addEventListener('submit', async e => {
   btn.disabled = true;
 
   try {
-    const response = await fetch('https://formspree.io/f/xeedvavy', {
+    const res = await fetch('https://formspree.io/f/xeedvavy', {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: new FormData(form)
     });
-
-    if (response.ok) {
+    if (res.ok) {
       form.style.display = 'none';
       formSuccess.style.display = 'block';
     } else {
       btn.textContent = 'Send Message';
       btn.disabled = false;
-      alert('Something went wrong. Please call or text us at 845-395-4492.');
+      alert('Something went wrong. Please call us at 845-395-4492.');
     }
   } catch {
     btn.textContent = 'Send Message';
     btn.disabled = false;
-    alert('Something went wrong. Please call or text us at 845-395-4492.');
+    alert('Something went wrong. Please call us at 845-395-4492.');
   }
 });
 
-// Scroll-in animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
+// Scroll animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      observer.unobserve(e.target);
     }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-document.querySelectorAll('.service-card, .plan-card, .hero-card, .about-content, .contact-info').forEach((el, i) => {
+document.querySelectorAll('.svc-card, .plan-main, .plan-coming-card, .about-card, .contact-left').forEach((el, i) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = `opacity .55s ease ${i * 0.07}s, transform .55s ease ${i * 0.07}s`;
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `opacity .5s ease ${i * 0.06}s, transform .5s ease ${i * 0.06}s`;
   observer.observe(el);
 });
