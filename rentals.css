@@ -1,0 +1,247 @@
+/* ===== RENTALS PAGE ===== */
+
+/* Nav always dark on this page */
+.nav { background: rgba(26,40,32,.97); backdrop-filter: blur(12px); }
+
+.nav-active {
+  color: var(--gold-lt) !important;
+  font-weight: 600 !important;
+}
+
+/* Hero */
+.r-hero {
+  background: linear-gradient(140deg, var(--ink) 0%, var(--ink-2) 55%, #2a4a38 100%);
+  padding: 130px 0 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.r-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(184,152,90,.12) 0%, transparent 60%);
+}
+
+.r-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.r-hero-left h1 {
+  font-size: clamp(36px, 4.5vw, 58px);
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.r-hero-left p {
+  font-size: 16px;
+  color: rgba(255,255,255,.65);
+  max-width: 420px;
+  margin-bottom: 36px;
+  line-height: 1.75;
+}
+
+.r-stat-card {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.r-stat strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.r-stat span {
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+}
+
+.r-stat-line {
+  height: 1px;
+  background: rgba(255,255,255,.1);
+}
+
+/* Services */
+.r-services {
+  padding: 100px 0;
+  background: var(--pale);
+}
+
+.r-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.r-svc-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
+  transition: var(--ease);
+  border: 1.5px solid transparent;
+}
+
+.r-svc-card:hover {
+  border-color: var(--pale-2);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.r-svc-icon {
+  font-size: 32px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.r-svc-card h3 {
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.r-svc-card p {
+  font-size: 14px;
+  color: var(--sage);
+  line-height: 1.7;
+}
+
+/* How it works */
+.r-how {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.r-steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 8px;
+}
+
+.r-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.r-step-num {
+  width: 48px;
+  height: 48px;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.r-step-content h3 {
+  font-size: 18px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.r-step-content p {
+  font-size: 13px;
+  color: var(--sage);
+  line-height: 1.7;
+}
+
+.r-step-arrow {
+  font-size: 20px;
+  color: var(--pale-2);
+  padding: 0 16px;
+  margin-top: 14px;
+  flex-shrink: 0;
+}
+
+/* CTA Banner */
+.r-cta {
+  padding: 72px 0;
+  background: var(--ink-2);
+}
+
+.r-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.r-cta-inner h2 {
+  font-size: clamp(24px, 3vw, 36px);
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.r-cta-inner p {
+  font-size: 15px;
+  color: rgba(255,255,255,.6);
+  max-width: 440px;
+}
+
+.r-cta-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.r-cta .btn-outline-dark {
+  color: rgba(255,255,255,.8);
+  border-color: rgba(255,255,255,.3);
+}
+.r-cta .btn-outline-dark:hover {
+  background: rgba(255,255,255,.1);
+  color: var(--white);
+  border-color: rgba(255,255,255,.6);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .r-services-grid { grid-template-columns: repeat(2, 1fr); }
+  .r-steps { flex-wrap: wrap; gap: 32px; }
+  .r-step-arrow { display: none; }
+  .r-step { flex-basis: calc(50% - 16px); }
+}
+
+@media (max-width: 768px) {
+  .r-hero-inner { grid-template-columns: 1fr; gap: 36px; padding: 0; }
+  .r-hero { padding: 100px 0 64px; }
+  .r-services { padding: 64px 0; }
+  .r-services-grid { grid-template-columns: 1fr; }
+  .r-how { padding: 64px 0; }
+  .r-cta { padding: 48px 0; }
+  .r-cta-inner { flex-direction: column; align-items: flex-start; }
+  .r-steps { flex-direction: column; }
+  .r-step { flex-basis: 100%; }
+}
+
+@media (max-width: 480px) {
+  .r-cta-actions { flex-direction: column; width: 100%; }
+  .r-cta-actions .btn-dark,
+  .r-cta-actions .btn-outline-dark { text-align: center; }
+}
