@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Care Plans | Emerald Management</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <img src="logo.png" alt="Emerald Management" class="nav-logo-img" />
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Emerald</span>
+          <span class="nav-brand-sub">MANAGEMENT</span>
+        </div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="home-care.html" class="nav-active">Home Care</a></li>
+        <li><a href="rentals.html">Rental Management</a></li>
+        <li><a href="#contact" class="nav-btn">Contact Us</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <span class="hero-label">Your Home Our Emerald™</span>
+        <h1>We Take Care<br />of Your Home</h1>
+        <p>Emerald Management handles all your home maintenance needs — so you can enjoy your sanctuary without the stress.</p>
+        <div class="hero-actions">
+          <a href="#plans" class="btn-dark">See Our Plans</a>
+          <a href="tel:8453954492" class="btn-ghost">Call 845-395-4492</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-feature-card">
+          <div class="hfc-top">
+            <img src="logo.png" alt="Emerald" class="hfc-logo" />
+            <div class="hfc-badge">Available 24/7</div>
+          </div>
+          <div class="hfc-divider"></div>
+          <div class="hfc-items">
+            <div class="hfc-item">
+              <span class="hfc-dot"></span>
+              <span>On-call plumbers, electricians & handymen</span>
+            </div>
+            <div class="hfc-item">
+              <span class="hfc-dot"></span>
+              <span>Maintenance checks every 4 months</span>
+            </div>
+            <div class="hfc-item">
+              <span class="hfc-dot"></span>
+              <span>Seasonal prep &amp; gutter cleaning</span>
+            </div>
+            <div class="hfc-item">
+              <span class="hfc-dot"></span>
+              <span>Snow removal &amp; lawn care</span>
+            </div>
+          </div>
+          <a href="#contact" class="hfc-cta">Get a Free Consultation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUR YEAR PLAN TOOL -->
+  <section class="year-plan" id="year-plan">
+    <div class="wrap">
+      <div class="yp-header">
+        <span class="eyebrow">Built For Your Home</span>
+        <h2>See Your Year of Care</h2>
+        <p>Tell us about your home and we'll show you exactly what we take care of — season by season.</p>
+      </div>
+
+      <div class="yp-toggles">
+        <div class="yp-toggle-group">
+          <span class="yp-toggle-label">Do you have a pool?</span>
+          <div class="yp-toggle-btns">
+            <button class="yp-btn active" data-q="pool" data-v="no">No</button>
+            <button class="yp-btn" data-q="pool" data-v="yes">Yes</button>
+          </div>
+        </div>
+        <div class="yp-divider"></div>
+        <div class="yp-toggle-group">
+          <span class="yp-toggle-label">Do you have a sprinkler system?</span>
+          <div class="yp-toggle-btns">
+            <button class="yp-btn active" data-q="sprinkler" data-v="no">No</button>
+            <button class="yp-btn" data-q="sprinkler" data-v="yes">Yes</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="yp-cards">
+        <div class="yp-card" id="card-spring">
+          <div class="yp-card-top spring">
+            <span class="yp-season-icon">🌱</span>
+            <div>
+              <p class="yp-season-name">Spring</p>
+              <p class="yp-season-months">March — May</p>
+            </div>
+          </div>
+          <ul class="yp-items" id="items-spring"></ul>
+        </div>
+        <div class="yp-card" id="card-summer">
+          <div class="yp-card-top summer">
+            <span class="yp-season-icon">☀️</span>
+            <div>
+              <p class="yp-season-name">Summer</p>
+              <p class="yp-season-months">June — August</p>
+            </div>
+          </div>
+          <ul class="yp-items" id="items-summer"></ul>
+        </div>
+        <div class="yp-card" id="card-fall">
+          <div class="yp-card-top fall">
+            <span class="yp-season-icon">🍂</span>
+            <div>
+              <p class="yp-season-name">Fall</p>
+              <p class="yp-season-months">September — November</p>
+            </div>
+          </div>
+          <ul class="yp-items" id="items-fall"></ul>
+        </div>
+        <div class="yp-card" id="card-winter">
+          <div class="yp-card-top winter">
+            <span class="yp-season-icon">❄️</span>
+            <div>
+              <p class="yp-season-name">Winter</p>
+              <p class="yp-season-months">December — February</p>
+            </div>
+          </div>
+          <ul class="yp-items" id="items-winter"></ul>
+        </div>
+      </div>
+
+      <div class="yp-footer">
+        <p>All of this is included in your <strong>Essential Care plan at $250/month.</strong></p>
+        <a href="#contact" class="btn-dark">Get Started Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-top">
+        <div>
+          <span class="eyebrow">What We Do</span>
+          <h2>Everything Your<br />Home Needs</h2>
+        </div>
+        <p class="section-desc">From emergency repairs to seasonal prep, our team handles it all year-round.</p>
+      </div>
+      <div class="services-grid">
+        <div class="svc-card">
+          <div class="svc-num">01</div>
+          <h3>24/7 On-Call Assistance</h3>
+          <p>Plumbers, electricians, and handymen ready to resolve any issue with a single call.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">02</div>
+          <h3>Regular Maintenance Checks</h3>
+          <p>Thorough home inspections every 4 months — AC filters, water softeners, and more.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">03</div>
+          <h3>Gutter Cleaning</h3>
+          <p>Annual pre-winter gutter clearing to protect your home from water damage.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">04</div>
+          <h3>Seasonal Preparation</h3>
+          <p>Sprinkler system open/close, outdoor furniture storage, and seasonal readiness.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">05</div>
+          <h3>Snow Removal</h3>
+          <p>Safe access to your home all winter — we handle the snow so you don't have to.</p>
+        </div>
+        <div class="svc-card">
+          <div class="svc-num">06</div>
+          <h3>Lawn & Exterior Care</h3>
+          <p>Weekly grass cutting, annual power wash, and dryer vent cleaning included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section class="plans" id="plans">
+    <div class="wrap">
+      <div class="plans-header">
+        <span class="eyebrow">Pricing</span>
+        <h2>One Simple Plan</h2>
+        <p>No hidden fees, no surprises. Everything your home needs for one flat monthly rate.</p>
+      </div>
+      <div class="plans-row">
+
+        <div class="plan-main">
+          <div class="plan-top">
+            <div>
+              <p class="plan-name">Essential Care</p>
+              <div class="plan-price-row">
+                <span class="plan-dollar">$</span>
+                <span class="plan-amount">250</span>
+                <span class="plan-mo">/month</span>
+              </div>
+            </div>
+            <a href="#contact" class="btn-dark">Get Started</a>
+          </div>
+          <div class="plan-divider"></div>
+          <div class="plan-features-grid">
+            <div class="pf-item"><span class="pf-check">✓</span><span>24/7 on-call assistance</span></div>
+            <div class="pf-item"><span class="pf-check">✓</span><span>Maintenance checks every 4 months</span></div>
+            <div class="pf-item"><span class="pf-check">✓</span><span>AC filter &amp; water softener service</span></div>
+            <div class="pf-item"><span class="pf-check">✓</span><span>Yearly gutter cleaning</span></div>
+            <div class="pf-item"><span class="pf-check">✓</span><span>Annual garbage can cleaning</span></div>
+            <div class="pf-item"><span class="pf-check">✓</span><span>Sprinkler system open &amp; close</span></div>
+            <div class="pf-item"><span class="pf-check">✓</span><span>Outdoor furniture storage</span></div>
+            <div class="pf-item"><span class="pf-check">✓</span><span>More services added regularly</span></div>
+          </div>
+        </div>
+
+        <div class="plan-side">
+          <div class="plan-coming-card">
+            <span class="coming-badge">Coming Soon</span>
+            <h3>Pool Care Plan</h3>
+            <p>A dedicated plan to keep your pool in pristine condition throughout the summer season.</p>
+            <a href="#contact" class="btn-outline-dark">Get Notified</a>
+          </div>
+          <div class="plan-contact-card">
+            <p>Questions about what's included?</p>
+            <a href="tel:8453954492">Call or text us →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-left">
+          <span class="eyebrow">About Us</span>
+          <h2>We Treat Your Home Like Our Own</h2>
+          <p>At Emerald Management, we understand that your home is your sanctuary. Our mission is to provide the highest level of convenience and peace of mind by taking care of all your home maintenance needs.</p>
+          <p>With a dedicated team of experienced professionals — plumbers, electricians, handymen, and lawn care specialists — we've built our reputation on reliability, transparency, and genuine care for every home we serve.</p>
+          <ul class="about-checks">
+            <li><span>✓</span> Experienced, licensed professionals</li>
+            <li><span>✓</span> Proactive care — we catch problems early</li>
+            <li><span>✓</span> Reachable by call, text, or WhatsApp</li>
+            <li><span>✓</span> Transparent pricing — no hidden fees</li>
+          </ul>
+          <a href="#plans" class="btn-dark">See Our Plan</a>
+        </div>
+        <div class="about-right">
+          <div class="about-card">
+            <img src="logo.png" alt="Emerald Management" class="about-card-logo" />
+            <blockquote>"Your Home Our Emerald™"</blockquote>
+            <div class="about-stats-row">
+              <div class="a-stat">
+                <strong>24/7</strong>
+                <span>On-Call</span>
+              </div>
+              <div class="a-stat-line"></div>
+              <div class="a-stat">
+                <strong>3×</strong>
+                <span>Yearly Checks</span>
+              </div>
+              <div class="a-stat-line"></div>
+              <div class="a-stat">
+                <strong>$250</strong>
+                <span>Flat Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <span class="eyebrow">Get In Touch</span>
+          <h2>Let's Talk About Your Home</h2>
+          <p>Ready to take the stress out of home maintenance? Reach out — we'd love to help.</p>
+          <div class="contact-ways">
+            <a href="tel:8453954492" class="cway">
+              <div class="cway-icon">📞</div>
+              <div>
+                <strong>Call / Text / WhatsApp</strong>
+                <span>845-395-4492</span>
+              </div>
+            </a>
+            <a href="mailto:info@emeraldmgm.com" class="cway">
+              <div class="cway-icon">✉️</div>
+              <div>
+                <strong>Email</strong>
+                <span>info@emeraldmgm.com</span>
+              </div>
+            </a>
+            <div class="cway">
+              <div class="cway-icon">🕐</div>
+              <div>
+                <strong>Emergency</strong>
+                <span>Available 24/7</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-btns">
+            <a href="tel:8453954492" class="btn-dark">Call Now</a>
+            <a href="https://wa.me/18453954492" class="btn-outline-dark">WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form id="contactForm" class="cform">
+            <h3>Send a Message</h3>
+            <div class="cform-row">
+              <div class="cform-field">
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="Jane" required />
+              </div>
+              <div class="cform-field">
+                <label>Last Name</label>
+                <input type="text" name="lastName" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="cform-field">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="cform-field">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="(845) 000-0000" />
+            </div>
+            <div class="cform-field">
+              <label>Interested In</label>
+              <select name="plan">
+                <option value="">Select...</option>
+                <option value="essential">Essential Care — $250/month</option>
+                <option value="pool">Pool Plan (Coming Soon)</option>
+                <option value="question">General Question</option>
+              </select>
+            </div>
+            <div class="cform-field">
+              <label>Message</label>
+              <textarea name="message" rows="4" placeholder="Tell us about your home..."></textarea>
+            </div>
+            <button type="submit" class="btn-dark btn-full">Send Message</button>
+            <p class="cform-note">We'll respond as soon as possible.</p>
+          </form>
+          <div id="formSuccess" class="cform-success" style="display:none">
+            <div class="success-check">✓</div>
+            <h3>Message Sent!</h3>
+            <p>We'll be in touch very soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <img src="logo.png" alt="Emerald Management" class="nav-logo-img" />
+            <div class="nav-brand-text">
+              <span class="nav-brand-name">Emerald</span>
+              <span class="nav-brand-sub">MANAGEMENT</span>
+            </div>
+          </a>
+          <p>Your Home Our Emerald™</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="home-care.html">Home Care Plans</a>
+          <a href="rentals.html">Rental Management</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <a href="tel:8453954492">845-395-4492</a>
+          <a href="mailto:info@emeraldmgm.com">info@emeraldmgm.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Emerald Management. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
